@@ -10,6 +10,7 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"os"
 	"time"
 )
 
@@ -121,7 +122,8 @@ func task() {
 }
 
 func main() {
-	port := "8080"
+	port := os.Getenv("PORT")
+	//port := "8080"
 
 	if port == "" {
 		log.Fatal("$PORT must be set")
