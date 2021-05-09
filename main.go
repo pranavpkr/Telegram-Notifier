@@ -66,6 +66,7 @@ func messageTelegram(bot_message string)  {
 }
 
 func task() {
+	fmt.Println("Task is being performed.")
 	URL := "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?"
 
 	payload := url.Values{}
