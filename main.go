@@ -31,7 +31,7 @@ func main() {
 	})
 
 	s := gocron.NewScheduler(time.UTC)
-	s.Every(1).Minutes().Do(task)
+	s.Every(24).Hours().Do(task)
 	s.StartAsync()
 
 	router.Run(":" + port)
