@@ -2,18 +2,23 @@
 github.com/gin-gonic/gin
 github.com/gin-gonic/gin/binding
 github.com/gin-gonic/gin/render
+# github.com/go-co-op/gocron v1.5.0
+github.com/go-co-op/gocron
 # github.com/heroku/x v0.0.0-20171004170240-705849e307dd
 github.com/heroku/x/hmetrics
 github.com/heroku/x/hmetrics/onload
-# github.com/jasonlvhit/gocron v0.0.1
-github.com/jasonlvhit/gocron
 # github.com/manucorporat/sse v0.0.0-20150604091100-c142f0f1baea
 github.com/manucorporat/sse
 # github.com/mattn/go-colorable v0.0.0-20150625154642-40e4aedc8fab
 github.com/mattn/go-colorable
 # github.com/mattn/go-isatty v0.0.0-20150814002629-7fcbc72f853b
 github.com/mattn/go-isatty
+# github.com/robfig/cron/v3 v3.0.1
+github.com/robfig/cron/v3
 # golang.org/x/net v0.0.0-20200226121028-0de0cce0169b
 golang.org/x/net/context
+# golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+golang.org/x/sync/semaphore
+golang.org/x/sync/singleflight
 # gopkg.in/bluesuncorp/validator.v5 v5.9.1
 gopkg.in/bluesuncorp/validator.v5

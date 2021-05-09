@@ -3,11 +3,12 @@ package main
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/go-co-op/gocron"
 	_ "github.com/heroku/x/hmetrics/onload"
-	"github.com/jasonlvhit/gocron"
 	"log"
 	"net/http"
 	"os"
+	"time"
 )
 
 func task() {
@@ -30,9 +31,9 @@ func main() {
 		c.HTML(http.StatusOK, "index.tmpl.html", nil)
 	})
 
-	s := gocron.NewScheduler()
+	s := gocron.NewScheduler(time.UTC)
 	s.Every(2).Hours().Do(task)
-	<-s.Start()
+	s.StartAsync()
 
 	router.Run(":" + port)
 }
