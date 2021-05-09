@@ -78,7 +78,18 @@ func task() {
 	if err != nil {
 		log.Fatalln(err)
 	}
+
 	req.Header.Set("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36")
+	req.Header.Set("Accept-Language","en-US;q=0.7,en;q=0.3")
+	req.Header.Set("authority","cdn-api.co-vin.in")
+	req.Header.Set("sec-ch-ua","\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\"")
+	req.Header.Set("accept","application/json, text/plain, */*")
+	req.Header.Set( "sec-ch-ua-mobile","?0")
+	req.Header.Set( "origin","https://www.cowin.gov.in")
+	req.Header.Set( "sec-fetch-site", "cross-site")
+	req.Header.Set( "sec-fetch-mode", "cors")
+	req.Header.Set( "sec-fetch-dest","empty")
+	req.Header.Set( "referer", "https://www.cowin.gov.in/")
 
 	q := req.URL.Query()
 	q.Add("pincode", "400001")
