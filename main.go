@@ -1,13 +1,18 @@
 package main
 
 import (
+	"fmt"
+	"github.com/gin-gonic/gin"
+	_ "github.com/heroku/x/hmetrics/onload"
+	"github.com/jasonlvhit/gocron"
 	"log"
 	"net/http"
 	"os"
-
-	"github.com/gin-gonic/gin"
-	_ "github.com/heroku/x/hmetrics/onload"
 )
+
+func task() {
+	fmt.Println("Task is being performed.")
+}
 
 func main() {
 	port := os.Getenv("PORT")
@@ -24,6 +29,10 @@ func main() {
 	router.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.tmpl.html", nil)
 	})
+
+	s := gocron.NewScheduler()
+	s.Every(2).Hours().Do(task)
+	<-s.Start()
 
 	router.Run(":" + port)
 }
