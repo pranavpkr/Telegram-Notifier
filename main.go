@@ -87,6 +87,7 @@ func task() {
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
+	log.Print(resp.Status)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -115,7 +116,7 @@ func task() {
 		}
 		if for18 {
 			//count ++
-			messageTelegram(fmt.Sprintf("%#v\n", data.Centers[i]))
+			//messageTelegram(fmt.Sprintf("%#v\n", data.Centers[i]))
 			//center.message += fmt.Sprintf("%#v\n", data.Centers[i])
 		}
 	}
