@@ -1,7 +1,7 @@
 
 # go-getting-started
 
-A barebones Go app, which can easily be deployed to Heroku.
+Go lang app to pull data from third party api via REST call and push notifications on Telegram, which can easily be deployed to Heroku or any other cloud service.
 
 This application supports the [Getting Started with Go on Heroku](https://devcenter.heroku.com/articles/getting-started-with-go) article - check it out.
 
