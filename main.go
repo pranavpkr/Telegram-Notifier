@@ -15,17 +15,17 @@ import (
 )
 
 type Session struct {
-SessionId         string   `json:"session_id"`
-Date              string   `json:"date"`
-AvailableCapacity int      `json:"available_capacity"`
-MinAgeLimit       int      `json:"min_age_limit"`
-Vaccine           string   `json:"vaccine"`
-Slots             []string `json:"slots"`
+	SessionId         string   `json:"session_id"`
+	Date              string   `json:"date"`
+	AvailableCapacity int      `json:"available_capacity"`
+	MinAgeLimit       int      `json:"min_age_limit"`
+	Vaccine           string   `json:"vaccine"`
+	Slots             []string `json:"slots"`
 }
 
 type VaccineFee struct {
-Vaccine string `json:"vaccine"`
-Fee     string `json:"fee"`
+	Vaccine string `json:"vaccine"`
+	Fee     string `json:"fee"`
 }
 
 type Centers struct {
@@ -50,8 +50,8 @@ type Response struct {
 }
 
 func messageTelegram(bot_message string)  {
-	var botToken = "1865363469:AAFyk4LsnskUMSKIYylJ1cx7cSXXikA8c0o"
-	var botChatid = "578229642"
+	var botToken = "your bot token"
+	var botChatid = "your bot chat id"
 	var sendTextURL = "https://api.telegram.org/bot"+ botToken +"/sendMessage?chat_id=-"+ botChatid +"&text="+ url.QueryEscape(bot_message)
 	log.Print(sendTextURL)
 	_, err := http.Get(sendTextURL)
@@ -127,7 +127,7 @@ func task() {
 		}
 		if for18 {
 			//count ++
-			//messageTelegram(fmt.Sprintf("%#v\n", data.Centers[i]))
+			messageTelegram(fmt.Sprintf("%#v\n", data.Centers[i]))
 			//center.message += fmt.Sprintf("%#v\n", data.Centers[i])
 		}
 	}
