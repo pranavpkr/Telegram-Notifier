@@ -10,7 +10,7 @@ This application supports the [Getting Started with Go on Heroku](https://devcen
 Make sure you have [Go](http://golang.org/doc/install) version 1.12 or newer and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
 
 ```sh
-$ git clone https://github.com/heroku/go-getting-started.git
+$ git clone https://github.com/pranavpkr/Telegram-Notifier.git
 $ cd go-getting-started
 $ go build -o bin/go-getting-started -v . # or `go build -o bin/go-getting-started.exe -v .` in git bash
 github.com/mattn/go-colorable
