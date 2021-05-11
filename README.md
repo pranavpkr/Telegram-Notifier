@@ -5,6 +5,9 @@ Go lang app to pull data from third party api via REST call and push notificatio
 
 This application supports the [Getting Started with Go on Heroku](https://devcenter.heroku.com/articles/getting-started-with-go) article - check it out.
 
+## Creating Telegram Bot
+Create your own telegram bot and enter it's token, and group your chat id by following [this](https://core.telegram.org/bots) link.
+
 ## Running Locally
 
 Make sure you have [Go](http://golang.org/doc/install) version 1.12 or newer and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
